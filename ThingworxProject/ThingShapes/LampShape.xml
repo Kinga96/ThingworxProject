@@ -13,7 +13,7 @@
          description=""
          documentationContent=""
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-10T16:17:03.701+01:00"
+         lastModifiedDate="2020-01-10T22:42:35.211+01:00"
          name="LampShape"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application">
@@ -86,7 +86,42 @@
             <RemoteEventBindings></RemoteEventBindings>
             <AlertConfigurations>
                 <AlertDefinitions
-                 name="intensity"></AlertDefinitions>
+                 name="intensity">
+                    <AlertDefinition
+                     alertType="Above"
+                     description=""
+                     enabled="true"
+                     name="lampWarning"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.friendlyName="Limit"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Limit to compare"
+                                     name="limit"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Limit?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Limit includes value"
+                                     name="limitInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limit>80.0</limit>
+                                    <limitInclusive>true</limitInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
                 <AlertDefinitions
                  name="lampID"></AlertDefinitions>
                 <AlertDefinitions

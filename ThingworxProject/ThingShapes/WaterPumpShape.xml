@@ -13,7 +13,7 @@
          description=""
          documentationContent=""
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-10T16:16:01.266+01:00"
+         lastModifiedDate="2020-01-10T22:08:21.856+01:00"
          name="WaterPumpShape"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application">
@@ -99,7 +99,42 @@
                 <AlertDefinitions
                  name="douche"></AlertDefinitions>
                 <AlertDefinitions
-                 name="hydration"></AlertDefinitions>
+                 name="hydration">
+                    <AlertDefinition
+                     alertType="Below"
+                     description=""
+                     enabled="true"
+                     name="hydrationWarning"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.friendlyName="Limit"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Limit to compare"
+                                     name="limit"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Limit?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Limit includes value"
+                                     name="limitInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limit>70.0</limit>
+                                    <limitInclusive>true</limitInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
                 <AlertDefinitions
                  name="messageWaterPump"></AlertDefinitions>
                 <AlertDefinitions

@@ -13,7 +13,7 @@
          description=""
          documentationContent=""
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-10T16:16:37.775+01:00"
+         lastModifiedDate="2020-01-10T22:25:34.999+01:00"
          name="VentilatorShape"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application">
@@ -77,7 +77,34 @@
                 <AlertDefinitions
                  name="messageVentilator"></AlertDefinitions>
                 <AlertDefinitions
-                 name="switch"></AlertDefinitions>
+                 name="switch">
+                    <AlertDefinition
+                     alertType="EqualTo"
+                     description=""
+                     enabled="true"
+                     name="ventilatorWarning"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Value"
+                                     aspect.isRequired="true"
+                                     baseType="BOOLEAN"
+                                     description="value"
+                                     name="value"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <value>true</value>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
                 <AlertDefinitions
                  name="ventilatorID"></AlertDefinitions>
             </AlertConfigurations>

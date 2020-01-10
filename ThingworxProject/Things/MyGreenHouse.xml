@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup="Mashup"
          identifier=""
-         lastModifiedDate="2020-01-10T16:18:21.752+01:00"
+         lastModifiedDate="2020-01-10T22:53:31.133+01:00"
          name="MyGreenHouse"
          projectName="ThingworxProject"
          published="false"
@@ -42,7 +42,213 @@
                 <EventDefinitions></EventDefinitions>
                 <ServiceMappings></ServiceMappings>
                 <ServiceImplementations></ServiceImplementations>
-                <Subscriptions></Subscriptions>
+                <Subscriptions>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="doorWarningSubscription"
+                     source=""
+                     sourceProperty="open"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="doorWarningSubscription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.messageDoor= "Warning: The door is open";
+                                            logger.warn("The doorWarning subscription was triggered");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="freezeWarningSubscription"
+                     source=""
+                     sourceProperty="temperature"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="freezeWarningSubscription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.messageThermostat= "Warning: Bad Temperature for plants!";
+                                            logger.warn("The freezeWarning subscription was triggered");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="hydrationWarningSubscription"
+                     source=""
+                     sourceProperty="hydration"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="hydrationWarningSubscription">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.messageWaterPump = "Warning: Too low soil hydration";
+                                            logger.warn("The hydrationWarning subscription was triggered");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="lampWarningSubscryption"
+                     source=""
+                     sourceProperty="intensity"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="lampWarningSubscryption">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.messageLamp= "Warning: It's too bright";
+                                            logger.warn("The lampWarning subscription was triggered");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="ventilatorWarningSubscryption"
+                     source=""
+                     sourceProperty="switch"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="ventilatorWarningSubscryption">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            me.messageVentilator = "Warning: Ventilator is working now";
+                                            logger.warn("The ventilatorWarning subscription was triggered");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
             </ThingShape>
             <PropertyBindings></PropertyBindings>
             <RemotePropertyBindings></RemotePropertyBindings>
@@ -67,16 +273,16 @@
                  type="ThingShape"></ImplementedShape>
             </ImplementedShapes>
             <ThingProperties>
-                <watts>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </watts>
                 <greenhouseID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </greenhouseID>
+                <watts>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </watts>
                 <meterID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>

@@ -13,7 +13,7 @@
          description=""
          documentationContent=""
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-10T15:40:54.852+01:00"
+         lastModifiedDate="2020-01-10T20:47:52.566+01:00"
          name="MeterShape"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application">
@@ -59,10 +59,59 @@
                  name="meterID"
                  ordinal="2"></PropertyDefinition>
             </PropertyDefinitions>
-            <ServiceDefinitions></ServiceDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="calculateCost">
+                    <ResultType
+                     baseType="NOTHING"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
             <EventDefinitions></EventDefinitions>
             <ServiceMappings></ServiceMappings>
-            <ServiceImplementations></ServiceImplementations>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="calculateCost">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description=""
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    me.currentCost = me.costPerKWh * me.currentPower;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
             <Subscriptions></Subscriptions>
             <avatar></avatar>
             <DesignTimePermissions>

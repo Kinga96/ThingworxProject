@@ -13,7 +13,7 @@
          description=""
          documentationContent=""
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-10T16:15:32.235+01:00"
+         lastModifiedDate="2020-01-10T22:46:27.442+01:00"
          name="DoorShape"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application">
@@ -79,7 +79,34 @@
                 <AlertDefinitions
                  name="messageDoor"></AlertDefinitions>
                 <AlertDefinitions
-                 name="open"></AlertDefinitions>
+                 name="open">
+                    <AlertDefinition
+                     alertType="EqualTo"
+                     description=""
+                     enabled="true"
+                     name="doorWarning"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Value"
+                                     aspect.isRequired="true"
+                                     baseType="BOOLEAN"
+                                     description="value"
+                                     name="value"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <value>true</value>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
             </AlertConfigurations>
             <InstanceRunTimePermissions></InstanceRunTimePermissions>
         </ThingShape>
