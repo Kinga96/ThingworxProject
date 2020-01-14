@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b2013"
+ build="b12"
  majorVersion="8"
- minorVersion="4"
+ minorVersion="5"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
  revision="0"
- schemaVersion="1040"
+ schemaVersion="1050"
  universal="password">
     <Projects>
         <Project
-         dependsOn=""
+         artifactId=""
+         dependsOn="{&quot;extensions&quot;:&quot;&quot;,&quot;projects&quot;:&quot;&quot;}"
          description=""
          documentationContent=""
+         groupId=""
          homeMashup=""
-         lastModifiedDate="2019-11-04T21:01:23.858+01:00"
+         lastModifiedDate="2020-01-11T16:47:20.287+01:00"
+         minPlatformVersion=""
          name="ThingworxProject"
          packageVersion="1.0.0"
          projectName="ThingworxProject"
+         publishResult=""
+         state="DRAFT"
          tags="">
             <avatar></avatar>
             <DesignTimePermissions>

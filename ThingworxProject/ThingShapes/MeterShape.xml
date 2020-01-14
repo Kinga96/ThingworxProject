@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b2013"
+ build="b12"
  majorVersion="8"
- minorVersion="4"
+ minorVersion="5"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
  revision="0"
- schemaVersion="1040"
+ schemaVersion="1050"
  universal="password">
     <ThingShapes>
         <ThingShape
@@ -13,7 +13,7 @@
          description=""
          documentationContent=""
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-10T20:47:52.566+01:00"
+         lastModifiedDate="2020-01-11T16:47:19.164+01:00"
          name="MeterShape"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application">

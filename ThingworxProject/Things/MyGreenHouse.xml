@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b2013"
+ build="b12"
  majorVersion="8"
- minorVersion="4"
+ minorVersion="5"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
  revision="0"
- schemaVersion="1040"
+ schemaVersion="1050"
  universal="password">
     <Things>
         <Thing
@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup="Mashup"
          identifier=""
-         lastModifiedDate="2020-01-10T22:53:31.133+01:00"
+         lastModifiedDate="2020-01-11T18:42:44.544+01:00"
          name="MyGreenHouse"
          projectName="ThingworxProject"
          published="false"
@@ -273,41 +273,41 @@
                  type="ThingShape"></ImplementedShape>
             </ImplementedShapes>
             <ThingProperties>
-                <greenhouseID>
+                <temperature>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </temperature>
+                <setTemperature>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </setTemperature>
+                <thermostatID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </greenhouseID>
-                <watts>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </watts>
-                <meterID>
+                </thermostatID>
+                <doorID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </meterID>
-                <costPerKWh>
-                    <Value>0.0</Value>
+                </doorID>
+                <open>
+                    <Value>false</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </costPerKWh>
-                <intensity>
-                    <Value>0.0</Value>
+                </open>
+                <switch>
+                    <Value>false</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </intensity>
-                <setIntensity>
-                    <Value>0.0</Value>
+                </switch>
+                <ventilatorID>
+                    <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </setIntensity>
-                <lampID>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </lampID>
+                </ventilatorID>
                 <waterPumpID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
@@ -328,41 +328,41 @@
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </setDouche>
-                <switch>
-                    <Value>false</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </switch>
-                <ventilatorID>
-                    <Value></Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </ventilatorID>
-                <doorID>
-                    <Value></Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </doorID>
-                <open>
-                    <Value>false</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </open>
-                <temperature>
+                <intensity>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </temperature>
-                <setTemperature>
+                </intensity>
+                <setIntensity>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </setTemperature>
-                <thermostatID>
+                </setIntensity>
+                <lampID>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </lampID>
+                <meterID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </thermostatID>
+                </meterID>
+                <costPerKWh>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </costPerKWh>
+                <watts>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </watts>
+                <greenhouseID>
+                    <Value></Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </greenhouseID>
             </ThingProperties>
         </Thing>
     </Things>
