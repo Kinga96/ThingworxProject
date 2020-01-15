@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b12"
+ build="b2013"
  majorVersion="8"
- minorVersion="5"
+ minorVersion="4"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
  revision="0"
- schemaVersion="1050"
+ schemaVersion="1040"
  universal="password">
     <Things>
         <Thing
@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup="Mashup"
          identifier=""
-         lastModifiedDate="2020-01-11T18:42:44.544+01:00"
+         lastModifiedDate="2020-01-15T17:42:23.820+01:00"
          name="MyGreenHouse"
          projectName="ThingworxProject"
          published="false"
@@ -273,46 +273,41 @@
                  type="ThingShape"></ImplementedShape>
             </ImplementedShapes>
             <ThingProperties>
-                <temperature>
+                <greenhouseID>
+                    <Value></Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </greenhouseID>
+                <watts>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </temperature>
-                <setTemperature>
+                </watts>
+                <costPerKWh>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </setTemperature>
-                <thermostatID>
+                </costPerKWh>
+                <meterID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </thermostatID>
-                <doorID>
-                    <Value></Value>
+                </meterID>
+                <intensity>
+                    <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </doorID>
-                <open>
-                    <Value>false</Value>
+                </intensity>
+                <lampID>
+                    <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </open>
-                <switch>
-                    <Value>false</Value>
+                </lampID>
+                <setIntensity>
+                    <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </switch>
-                <ventilatorID>
-                    <Value></Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </ventilatorID>
-                <waterPumpID>
-                    <Value></Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </waterPumpID>
+                </setIntensity>
                 <douche>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
@@ -328,41 +323,46 @@
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </setDouche>
-                <intensity>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </intensity>
-                <setIntensity>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </setIntensity>
-                <lampID>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </lampID>
-                <meterID>
+                <waterPumpID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </meterID>
-                <costPerKWh>
-                    <Value>0.0</Value>
+                </waterPumpID>
+                <switch>
+                    <Value>false</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </costPerKWh>
-                <watts>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </watts>
-                <greenhouseID>
+                </switch>
+                <ventilatorID>
                     <Value></Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
-                </greenhouseID>
+                </ventilatorID>
+                <doorID>
+                    <Value></Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </doorID>
+                <open>
+                    <Value>false</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </open>
+                <setTemperature>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </setTemperature>
+                <temperature>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </temperature>
+                <thermostatID>
+                    <Value></Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </thermostatID>
             </ThingProperties>
         </Thing>
     </Things>

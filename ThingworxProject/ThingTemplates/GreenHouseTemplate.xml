@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b12"
+ build="b2013"
  majorVersion="8"
- minorVersion="5"
+ minorVersion="4"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
  revision="0"
- schemaVersion="1050"
+ schemaVersion="1040"
  universal="password">
     <ThingTemplates>
         <ThingTemplate
@@ -14,7 +14,7 @@
          documentationContent=""
          effectiveThingPackage="ConfiguredThing"
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-11T18:58:46.535+01:00"
+         lastModifiedDate="2020-01-15T17:42:23.647+01:00"
          name="GreenHouseTemplate"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application"

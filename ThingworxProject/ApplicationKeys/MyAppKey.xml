@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2013"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
+    <ApplicationKeys>
+        <ApplicationKey
+         clientName=""
+         description=""
+         documentationContent=""
+         expirationDate="2020-02-28T23:00:00.000Z"
+         homeMashup=""
+         ipWhitelist=""
+         keyId=""
+         lastModifiedDate="2020-01-15T17:47:53.553+01:00"
+         name="MyAppKey"
+         projectName="ThingworxProject"
+         tags="GreenHouseProject:Home Application"
+         userNameReference="default_user">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </ApplicationKey>
+    </ApplicationKeys>
+</Entities>
