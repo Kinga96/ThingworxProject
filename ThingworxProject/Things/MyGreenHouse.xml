@@ -345,8 +345,8 @@
                 </doorID>
                 <open>
                     <Value>false</Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
+                    <Timestamp>2020-01-15T19:11:10.580+01:00</Timestamp>
+                    <Quality>GOOD</Quality>
                 </open>
                 <setTemperature>
                     <Value>0.0</Value>
