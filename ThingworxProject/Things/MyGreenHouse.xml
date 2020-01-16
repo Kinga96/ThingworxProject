@@ -11,11 +11,11 @@
         <Thing
          description=""
          documentationContent=""
-         effectiveThingPackage="ConfiguredThing"
+         effectiveThingPackage="RemoteThing"
          enabled="true"
          homeMashup="Mashup"
          identifier=""
-         lastModifiedDate="2020-01-15T17:42:23.820+01:00"
+         lastModifiedDate="2020-01-16T03:05:23.801+01:00"
          name="MyGreenHouse"
          projectName="ThingworxProject"
          published="false"
@@ -35,7 +35,36 @@
                 <Visibility></Visibility>
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
-            <ConfigurationTables></ConfigurationTables>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
             <ThingShape>
                 <PropertyDefinitions></PropertyDefinitions>
                 <ServiceDefinitions></ServiceDefinitions>
@@ -273,16 +302,21 @@
                  type="ThingShape"></ImplementedShape>
             </ImplementedShapes>
             <ThingProperties>
-                <greenhouseID>
-                    <Value></Value>
-                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </greenhouseID>
                 <watts>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </watts>
+                <greenhouseID>
+                    <Value></Value>
+                    <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </greenhouseID>
+                <lastConnection>
+                    <Value>1970-01-01T01:00:00.000+01:00</Value>
+                    <Timestamp>2020-01-16T03:12:31.457+01:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </lastConnection>
                 <costPerKWh>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
@@ -293,6 +327,16 @@
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </meterID>
+                <reportingLastEvaluation>
+                    <Value>1970-01-01T01:00:00.000+01:00</Value>
+                    <Timestamp>2020-01-16T03:12:31.457+01:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </reportingLastEvaluation>
+                <reportingLastChange>
+                    <Value>1970-01-01T01:00:00.000+01:00</Value>
+                    <Timestamp>2020-01-16T03:12:31.457+01:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </reportingLastChange>
                 <intensity>
                     <Value>0.0</Value>
                     <Timestamp>1970-01-01T01:00:00.000+01:00</Timestamp>

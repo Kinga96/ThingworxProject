@@ -9,12 +9,12 @@
  universal="password">
     <ThingTemplates>
         <ThingTemplate
-         baseThingTemplate="GenericThing"
+         baseThingTemplate="RemoteThing"
          description=""
          documentationContent=""
-         effectiveThingPackage="ConfiguredThing"
+         effectiveThingPackage="RemoteThing"
          homeMashup="Mashup"
-         lastModifiedDate="2020-01-15T17:42:23.647+01:00"
+         lastModifiedDate="2020-01-16T03:12:31.317+01:00"
          name="GreenHouseTemplate"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application"
@@ -33,9 +33,49 @@
                 <Visibility></Visibility>
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
-            <ConfigurationTables></ConfigurationTables>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
             <PropertyBindings></PropertyBindings>
-            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding
+                 aspect.source=""
+                 aspect.startType="useDefaultValue"
+                 aspect.tagAddress=""
+                 foldType="NONE"
+                 name="watts"
+                 pushThreshold="0.0"
+                 pushType="ALWAYS"
+                 sourceName="watts"
+                 timeout="0"></RemotePropertyBinding>
+            </RemotePropertyBindings>
             <RemoteServiceBindings></RemoteServiceBindings>
             <RemoteEventBindings></RemoteEventBindings>
             <AlertConfigurations>

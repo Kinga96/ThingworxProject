@@ -16,11 +16,11 @@
          homeMashup=""
          ipWhitelist=""
          keyId=""
-         lastModifiedDate="2020-01-15T17:47:53.553+01:00"
+         lastModifiedDate="2020-01-16T04:23:40.720+01:00"
          name="MyAppKey"
          projectName="ThingworxProject"
          tags="GreenHouseProject:Home Application"
-         userNameReference="default_user">
+         userNameReference="Administrator">
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
