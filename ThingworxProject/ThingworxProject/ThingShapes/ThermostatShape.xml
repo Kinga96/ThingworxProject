@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b12"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1050"
+ universal="password">
+    <ThingShapes>
+        <ThingShape
+         className=""
+         description=""
+         documentationContent=""
+         homeMashup="Mashup"
+         lastModifiedDate="2020-01-16T13:51:24.054+01:00"
+         name="ThermostatShape"
+         projectName="ThingworxProject"
+         tags="GreenHouseProject:Home Application">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 baseType="STRING"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="messageThermostat"
+                 ordinal="5"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="setTemperature"
+                 ordinal="4"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="temperature"
+                 ordinal="3"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 baseType="STRING"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="thermostatID"
+                 ordinal="2"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions></ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations></ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="messageThermostat"></AlertDefinitions>
+                <AlertDefinitions
+                 name="setTemperature"></AlertDefinitions>
+                <AlertDefinitions
+                 name="temperature">
+                    <AlertDefinition
+                     alertType="InRange"
+                     description=""
+                     enabled="true"
+                     name="badTemperatureWarning"
+                     priority="1"
+                     propertyBaseType="NUMBER">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Calculate minimum and maximum"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.entityType === 'Thing' &amp;&amp; model.alertType === 'OutOfRange' &amp;&amp; (model.itemType === undefined || model.itemType === 'my' || (model.itemType ==='inherited' &amp;&amp; model.override === true))"
+                                     baseType="BOOLEAN"
+                                     description="Calculate Limit from alert value"
+                                     name="calculationShow"
+                                     ordinal="4"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.defaultValue="Percentage"
+                                     aspect.friendlyName="Calculation Units"
+                                     aspect.isRequired="false"
+                                     aspect.selectOptions="Amount:Amount|Percentage:Percentage"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     baseType="STRING"
+                                     description="Calculation type"
+                                     name="calculationType"
+                                     ordinal="6"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.friendlyName="Calculation Value"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     baseType="NUMBER"
+                                     description="Calculation value for Min and Max from alert value"
+                                     name="calculationValue"
+                                     ordinal="5"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.disabledWhenField="calculationShow"
+                                     aspect.friendlyName="Maximum"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Maximum value"
+                                     name="maximum"
+                                     ordinal="2"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="false"
+                                     aspect.friendlyName="Include Maximum?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Range includes maximum"
+                                     name="maximumInclusive"
+                                     ordinal="3"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.compareField="maximum"
+                                     aspect.compareType="le"
+                                     aspect.disabledWhenField="calculationShow"
+                                     aspect.friendlyName="Minimum"
+                                     aspect.isRequired="true"
+                                     baseType="NUMBER"
+                                     description="Minimum value"
+                                     name="minimum"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Minimum?"
+                                     aspect.isRequired="false"
+                                     baseType="BOOLEAN"
+                                     description="Range includes minimum"
+                                     name="minimumInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.class="attribute-indent"
+                                     aspect.friendlyName="Property Value"
+                                     aspect.isRequired="false"
+                                     aspect.show="model.alertModel.alert.alertAttributes.rows[0].calculationShow"
+                                     aspect.twxid="allowPropertyValueRetrieval"
+                                     baseType="NUMBER"
+                                     description="property value"
+                                     name="propertyValue"
+                                     ordinal="7"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <calculationShow>false</calculationShow>
+                                    <calculationType>
+                                    <![CDATA[
+                                    Percentage
+                                    ]]>
+                                    </calculationType>
+                                    <maximum>35.0</maximum>
+                                    <maximumInclusive>true</maximumInclusive>
+                                    <minimum>25.0</minimum>
+                                    <minimumInclusive>true</minimumInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions
+                 name="thermostatID"></AlertDefinitions>
+            </AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>
